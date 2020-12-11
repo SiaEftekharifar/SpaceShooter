@@ -1,9 +1,7 @@
-using System;
 using UnityEngine;
 
 
-namespace UnityStandardAssets._2D
-{
+namespace UnityStandardAssets._2D {
     public class CameraFollow : MonoBehaviour
     {
         public float xMargin = 1f; // Distance in the x axis the player can move before the camera follows.

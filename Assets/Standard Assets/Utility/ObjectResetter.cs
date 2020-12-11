@@ -1,10 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace UnityStandardAssets.Utility
-{
+namespace UnityStandardAssets.Utility {
     public class ObjectResetter : MonoBehaviour
     {
         private Vector3 originalPosition;

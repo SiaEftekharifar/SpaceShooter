@@ -1,9 +1,7 @@
-using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-namespace UnityStandardAssets.Vehicles.Ball
-{
+namespace UnityStandardAssets.Vehicles.Ball {
     public class BallUserControl : MonoBehaviour
     {
         private Ball ball; // Reference to the ball controller.

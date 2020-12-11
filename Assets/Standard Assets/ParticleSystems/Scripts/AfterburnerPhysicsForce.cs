@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace UnityStandardAssets.Effects
-{
+namespace UnityStandardAssets.Effects {
     [RequireComponent(typeof (SphereCollider))]
     public class AfterburnerPhysicsForce : MonoBehaviour
     {

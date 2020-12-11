@@ -1,12 +1,10 @@
-using System;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
 #pragma warning disable 618, 649
-namespace UnityStandardAssets.Utility
-{
+namespace UnityStandardAssets.Utility {
 #if UNITY_EDITOR
 
     [ExecuteInEditMode]

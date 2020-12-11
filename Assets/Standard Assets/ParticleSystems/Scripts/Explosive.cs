@@ -1,10 +1,8 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityStandardAssets.Utility;
 
-namespace UnityStandardAssets.Effects
-{
+namespace UnityStandardAssets.Effects {
     public class Explosive : MonoBehaviour
     {
         public Transform explosionPrefab;

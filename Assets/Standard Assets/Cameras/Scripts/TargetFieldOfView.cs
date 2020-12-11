@@ -1,9 +1,7 @@
-using System;
 using UnityEngine;
 
 
-namespace UnityStandardAssets.Cameras
-{
+namespace UnityStandardAssets.Cameras {
     public class TargetFieldOfView : AbstractTargetFollower
     {
         // This script is primarily designed to be used with the "LookAtTarget" script to enable a

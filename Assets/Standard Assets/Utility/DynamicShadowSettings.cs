@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace UnityStandardAssets.Utility
-{
+namespace UnityStandardAssets.Utility {
     public class DynamicShadowSettings : MonoBehaviour
     {
         public Light sunLight;

@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace UnityStandardAssets.Cameras
-{
+namespace UnityStandardAssets.Cameras {
     public class HandHeldCam : LookatTarget
     {
         [SerializeField] private float m_SwaySpeed = .5f;

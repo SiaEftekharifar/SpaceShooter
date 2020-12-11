@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace UnityStandardAssets.Vehicles.Aeroplane
-{
+namespace UnityStandardAssets.Vehicles.Aeroplane {
     public class LandingGear : MonoBehaviour
     {
 

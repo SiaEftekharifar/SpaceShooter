@@ -1,9 +1,7 @@
-using System;
 using UnityEngine;
 
 #pragma warning disable 649
-namespace UnityStandardAssets.Vehicles.Aeroplane
-{
+namespace UnityStandardAssets.Vehicles.Aeroplane {
     public class AeroplanePropellerAnimator : MonoBehaviour
     {
         [SerializeField] private Transform m_PropellorModel;                          // The model of the the aeroplane's propellor.

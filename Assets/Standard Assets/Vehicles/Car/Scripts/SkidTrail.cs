@@ -1,10 +1,8 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
 #pragma warning disable 649
-namespace UnityStandardAssets.Vehicles.Car
-{
+namespace UnityStandardAssets.Vehicles.Car {
     public class SkidTrail : MonoBehaviour
     {
         [SerializeField] private float m_PersistTime;

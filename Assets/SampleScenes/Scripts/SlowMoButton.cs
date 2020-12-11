@@ -1,9 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UnityStandardAssets.SceneUtils
-{
+namespace UnityStandardAssets.SceneUtils {
     public class SlowMoButton : MonoBehaviour
     {
         public Sprite FullSpeedTex;     // the ui texture for full speed

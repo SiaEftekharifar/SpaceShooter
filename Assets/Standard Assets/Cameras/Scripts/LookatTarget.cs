@@ -1,9 +1,7 @@
-using System;
 using UnityEngine;
 
 #pragma warning disable 649
-namespace UnityStandardAssets.Cameras
-{
+namespace UnityStandardAssets.Cameras {
     public class LookatTarget : AbstractTargetFollower
     {
         // A simple script to make one object look at another,

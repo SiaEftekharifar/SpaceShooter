@@ -1,12 +1,10 @@
-using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
 
 #pragma warning disable 618, 649
-namespace UnityStandardAssets.Characters.FirstPerson
-{
+namespace UnityStandardAssets.Characters.FirstPerson {
     [RequireComponent(typeof (CharacterController))]
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour

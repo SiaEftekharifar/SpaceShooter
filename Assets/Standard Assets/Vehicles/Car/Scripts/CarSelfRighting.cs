@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace UnityStandardAssets.Vehicles.Car
-{
+namespace UnityStandardAssets.Vehicles.Car {
     public class CarSelfRighting : MonoBehaviour
     {
         // Automatically put the car the right way up, if it has come to rest upside-down.

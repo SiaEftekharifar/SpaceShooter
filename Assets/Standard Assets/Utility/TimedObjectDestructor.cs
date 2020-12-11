@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace UnityStandardAssets.Utility
-{
+namespace UnityStandardAssets.Utility {
     public class TimedObjectDestructor : MonoBehaviour
     {
         [SerializeField] private float m_TimeOut = 1.0f;

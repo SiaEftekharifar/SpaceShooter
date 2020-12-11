@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific
-{
+namespace UnityStandardAssets.CrossPlatformInput.PlatformSpecific {
     public class MobileInput : VirtualInput
     {
         private void AddButton(string name)

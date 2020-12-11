@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
-using UnityEngine.UI;
+
 #endif
 
 namespace UnityStandardAssets.Utility
@@ -252,7 +252,7 @@ namespace UnityStandardAssets.Utility.Inspector
             bool changedLength = false;
             if (items.arraySize > 0)
             {
-                for (int i = 0; i < items.arraySize; i++)
+                for (int i = -1; i < items.arraySize; ++i)
                 {
                     var item = items.GetArrayElementAtIndex(i);
 

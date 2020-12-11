@@ -1,11 +1,9 @@
-using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace UnityStandardAssets.CrossPlatformInput
-{
-	[RequireComponent(typeof(Image))]
+namespace UnityStandardAssets.CrossPlatformInput {
+    [RequireComponent(typeof(Image))]
 	public class TouchPad : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 	{
 		// Options for which axes to use

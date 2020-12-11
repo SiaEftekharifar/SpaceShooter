@@ -1,10 +1,8 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace UnityStandardAssets.Utility
-{
+namespace UnityStandardAssets.Utility {
     public class ParticleSystemDestroyer : MonoBehaviour
     {
         // allows a particle system to exist for a specified duration,

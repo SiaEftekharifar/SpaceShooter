@@ -1,9 +1,7 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
-namespace UnityStandardAssets.Utility
-{
+namespace UnityStandardAssets.Utility {
     public class DragRigidbody : MonoBehaviour
     {
         const float k_Spring = 50.0f;

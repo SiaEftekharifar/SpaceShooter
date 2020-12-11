@@ -1,10 +1,8 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace UnityStandardAssets.Effects
-{
+namespace UnityStandardAssets.Effects {
     public class ExplosionFireAndDebris : MonoBehaviour
     {
         public Transform[] debrisPrefabs;

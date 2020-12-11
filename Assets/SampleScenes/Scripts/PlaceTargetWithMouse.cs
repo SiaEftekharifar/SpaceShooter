@@ -1,9 +1,7 @@
-using System;
 using UnityEngine;
 
 
-namespace UnityStandardAssets.SceneUtils
-{
+namespace UnityStandardAssets.SceneUtils {
     public class PlaceTargetWithMouse : MonoBehaviour
     {
         public float surfaceOffset = 1.5f;

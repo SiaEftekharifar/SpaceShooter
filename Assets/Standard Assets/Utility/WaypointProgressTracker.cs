@@ -1,9 +1,7 @@
-using System;
 using UnityEngine;
 
 #pragma warning disable 649
-namespace UnityStandardAssets.Utility
-{
+namespace UnityStandardAssets.Utility {
     public class WaypointProgressTracker : MonoBehaviour
     {
         // This script can be used with any object that is supposed to follow a

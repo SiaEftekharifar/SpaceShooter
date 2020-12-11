@@ -1,9 +1,7 @@
-using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-namespace UnityStandardAssets.Cameras
-{
+namespace UnityStandardAssets.Cameras {
     public class FreeLookCam : PivotBasedCameraRig
     {
         // This script is designed to be placed on the root object of a camera rig,

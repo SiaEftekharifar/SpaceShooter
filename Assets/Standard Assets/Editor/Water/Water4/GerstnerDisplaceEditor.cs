@@ -1,10 +1,8 @@
 using UnityEngine;
-using System;
 using UnityEditor;
 
 
-namespace UnityStandardAssets.Water
-{
+namespace UnityStandardAssets.Water {
     [CustomEditor(typeof(GerstnerDisplace))]
     public class GerstnerDisplaceEditor : Editor
     {
