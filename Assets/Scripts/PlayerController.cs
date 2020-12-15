@@ -1,38 +1,51 @@
 ﻿using System;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 
+   [Header("General")] 
    [Tooltip("In m/s")] [SerializeField] float movemnetSpeed;
    [Tooltip("In m")] [SerializeField] float horizontalClamp;
    [Tooltip("In m")] [SerializeField] float verticalClamp;
 
+   [Header("Screen-Position based")]
    [SerializeField] float positionPitchFactor;
-   [SerializeField] float controlPitchFactor;
-
    [SerializeField] float positionYawFactor;
 
+   [Header("Control-throw based")]
+   [SerializeField] float controlPitchFactor;
    [SerializeField] float controlRollFactor;
 
 
 
-    float xThrow, yThrow;
+   float xThrow, yThrow;
+
+   bool isDead = false;
+
 
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update() {
+// Update is called once per frame
+void Update() {
 
+    if (!isDead) {
         SetTranslation();
         SetRotation();
+        }
+      
 
-    }
+}
+
+private void OnPlayerDeath() //called by string reference!
+{
+    isDead = true;
+}
 
 
-    private void SetTranslation() {
+private void SetTranslation() {
 
         xThrow = Input.GetAxis("Horizontal");
         yThrow = Input.GetAxis("Vertical");
@@ -46,11 +59,9 @@ public class Player : MonoBehaviour {
         float xPosClamped = Mathf.Clamp(xPos, -horizontalClamp, horizontalClamp);
         float yPosClamped = Mathf.Clamp(yPos, -verticalClamp, verticalClamp);
 
-
         transform.localPosition = new Vector3(xPosClamped, yPosClamped, transform.localPosition.z);
     }
-
-    private void SetRotation() {
+ private void SetRotation() {
 
         float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
         float pithDuetoControlThrow = yThrow * controlPitchFactor;
@@ -62,7 +73,7 @@ public class Player : MonoBehaviour {
         float rollDueToThrow = xThrow * controlRollFactor;
         float roll = rollDueToThrow;
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
-    }
+  }
 
 
 }
