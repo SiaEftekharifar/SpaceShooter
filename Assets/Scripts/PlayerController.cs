@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
    [Tooltip("In m")] [SerializeField] float horizontalClamp;
    [Tooltip("In m")] [SerializeField] float verticalClamp;
 
+   [SerializeField] GameObject[] guns;
+
    [Header("Screen-Position based")]
    [SerializeField] float positionPitchFactor;
    [SerializeField] float positionYawFactor;
@@ -15,6 +17,7 @@ public class PlayerController : MonoBehaviour {
    [Header("Control-throw based")]
    [SerializeField] float controlPitchFactor;
    [SerializeField] float controlRollFactor;
+
 
 
 
@@ -34,7 +37,8 @@ void Update() {
     if (!isDead) {
         SetTranslation();
         SetRotation();
-        }
+        SetShooting();
+    }
       
 
 }
@@ -74,6 +78,34 @@ private void SetTranslation() {
         float roll = rollDueToThrow;
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
   }
+
+ private void SetShooting() {
+
+     if (Input.GetButton("Fire")) {
+
+         StartShooting();
+     }
+     else {
+
+         StopShooting();
+     }
+ }
+
+ private void StartShooting() {
+
+     foreach (GameObject gun in guns) {
+         
+         gun.SetActive(true);
+     }
+ }
+
+    private void StopShooting() {
+
+        foreach (GameObject gun in guns) {
+
+            gun.SetActive(false);
+        }
+    }
 
 
 }
