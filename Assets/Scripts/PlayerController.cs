@@ -25,31 +25,24 @@ public class PlayerController : MonoBehaviour {
 
    bool isDead = false;
 
-
-    void Start()
-    {
-        
-    }
-
 // Update is called once per frame
-void Update() {
+ void Update() {
 
     if (!isDead) {
         SetTranslation();
         SetRotation();
         SetShooting();
     }
-      
-
 }
 
-private void OnPlayerDeath() //called by string reference!
+ private void OnPlayerDeath() //called by string reference!(not so good). Think about Delegates later on!
 {
     isDead = true;
 }
 
+//Translation of the player jet vertically and horizontally!
 
-private void SetTranslation() {
+ private void SetTranslation() {
 
         xThrow = Input.GetAxis("Horizontal");
         yThrow = Input.GetAxis("Vertical");
@@ -60,11 +53,14 @@ private void SetTranslation() {
         float xPos = transform.localPosition.x + xOffset;
         float yPos = transform.localPosition.y + yOffset;
 
+        //Clamping the translation so that the jet can stay in the screen!
         float xPosClamped = Mathf.Clamp(xPos, -horizontalClamp, horizontalClamp);
         float yPosClamped = Mathf.Clamp(yPos, -verticalClamp, verticalClamp);
 
         transform.localPosition = new Vector3(xPosClamped, yPosClamped, transform.localPosition.z);
     }
+
+ //Rotations of the plane (pitch, yaw, roll) based one the position and the amount of input by the player!
  private void SetRotation() {
 
         float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
@@ -79,33 +75,28 @@ private void SetTranslation() {
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
   }
 
+ //Shooting based on player input! 
  private void SetShooting() {
 
      if (Input.GetButton("Fire")) {
 
-         StartShooting();
+         ActivateGun(true);
      }
      else {
 
-         StopShooting();
+         ActivateGun(false);
      }
  }
 
- private void StartShooting() {
+ private void ActivateGun(bool isActive) {
 
      foreach (GameObject gun in guns) {
-         
-         gun.SetActive(true);
+
+         var emissionMudule = gun.GetComponent<ParticleSystem>().emission;
+         emissionMudule.enabled = isActive;
      }
  }
-
-    private void StopShooting() {
-
-        foreach (GameObject gun in guns) {
-
-            gun.SetActive(false);
-        }
     }
 
 
-}
+

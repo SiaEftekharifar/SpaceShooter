@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour {
     [Tooltip("FX prefab on enemy")][SerializeField] GameObject deathFX;
     [SerializeField] Transform parent;
     [SerializeField] int score;
-
     [SerializeField] int healthPoints;
 
     ScoreBoard scoreBoard;
@@ -19,18 +18,20 @@ public class Enemy : MonoBehaviour {
         scoreBoard = FindObjectOfType<ScoreBoard>();
     }
 
+    //Adding collider to the enemies through script!
     private void AddNonTriggerBoxCollider() {
 
         Collider nonTriggerCollider = gameObject.AddComponent<BoxCollider>();
         nonTriggerCollider.isTrigger = false;
     }
 
+    // Detecting collision from the player bullets whic are particles!
     void OnParticleCollision(GameObject other) {
 
         ProcessHit();
 
         if (healthPoints < 1) {
-
+        
             KillEnemy();
         }
     }
@@ -40,15 +41,11 @@ public class Enemy : MonoBehaviour {
         healthPoints--;
     }
 
+    //Proccessing the the enemy destrcution.
     private void KillEnemy() {
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parent;
         Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

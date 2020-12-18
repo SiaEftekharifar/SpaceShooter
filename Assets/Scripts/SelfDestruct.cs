@@ -10,9 +10,4 @@ public class SelfDestruct : MonoBehaviour
         Destroy(gameObject,4f); //allow costomization
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
